@@ -48,6 +48,10 @@ app.get('/', (req,res) => {
     res.render("index", {color: color});
 });
 
+app.get('/game', (req, res) => {
+	res.render("game");
+});
+
 app.use(express.static(__dirname + "/public"));
 
 app.get("*", (req,res) => {
